@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_gravity="start"
+             android:background="?attr/widgetBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_nav_top_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/layout_info"
+                    android:src="@drawable/main_nav_header_bg"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true" />
+
+
+                <LinearLayout
+                    android:id="@+id/layout_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/image_placeholder"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:text="TakWolf"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/text_secondary_dark"
+                        android:textSize="14sp"
+                        android:text="积分：0"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <View style="@style/AppWidget.ItemGap" />
+            <CheckedTextView
+                style="@style/AppWidget.NavigationItem"
+                android:id="@+id/btn_nav_all"
+                android:drawableStart="@drawable/main_nav_ic_all"
+                android:drawableLeft="@drawable/main_nav_ic_all"
+                android:text="@string/tab_all"
+                android:checked="true" />
+            <CheckedTextView
+                style="@style/AppWidget.NavigationItem"
+                android:id="@+id/btn_nav_good"
+                android:drawableStart="@drawable/main_nav_ic_good"
+                android:drawableLeft="@drawable/main_nav_ic_good"
+                android:text="@string/tab_good" />
+            <CheckedTextView
+                style="@style/AppWidget.NavigationItem"
+                android:id="@+id/btn_nav_share"
+                android:drawableStart="@drawable/main_nav_ic_share"
+                android:drawableLeft="@drawable/main_nav_ic_share"
+                android:text="@string/tab_share" />
+            <CheckedTextView
+                style="@style/AppWidget.NavigationItem"
+                android:id="@+id/btn_nav_ask"
+                android:drawableStart="@drawable/main_nav_ic_ask"
+                android:drawableLeft="@drawable/main_nav_ic_ask"
+                android:text="@string/tab_ask" />
+            <CheckedTextView
+                style="@style/AppWidget.NavigationItem"
+                android:id="@+id/btn_nav_job"
+                android:drawableStart="@drawable/main_nav_ic_job"
+                android:drawableLeft="@drawable/main_nav_ic_job"
+                android:text="@string/tab_job" />
+
+            <View style="@style/AppWidget.NavigationItemDeepLineGap" />
+
+
+            <TextView
+                style="@style/AppWidget.NavigationItem"
+                android:drawableStart="@drawable/ic_notifications_grey600_24dp"
+                android:drawableLeft="@drawable/ic_notifications_grey600_24dp"
+                android:text="消息"/>
+            <TextView
+                style="@style/AppWidget.NavigationItem"
+                android:drawableStart="@drawable/ic_settings_grey600_24dp"
+                android:drawableLeft="@drawable/ic_settings_grey600_24dp"
+                android:text="设置"/>
+            <TextView
+                style="@style/AppWidget.NavigationItem"
+                android:drawableStart="@drawable/ic_settings_grey600_24dp"
+                android:drawableLeft="@drawable/ic_settings_grey600_24dp"
+                android:text="关于"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
